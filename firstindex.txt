@@ -1,0 +1,30 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+    public static int arrfirstindex(int arr[],int i,int data)
+    {
+        int n=arr.length;
+        if(n==i)
+        {
+            return -1;
+        }
+        if(data==arr[i])
+        {
+            return i;
+        }
+        else
+        {
+      
+            int b=arrfirstindex(arr,i+1,data);
+            return b;
+        }
+ }
+	public static void main (String[] args) {
+		int arr[]={1,2,4,3,4,4,5};
+	
+		int data=7;
+        System.out.println(arrfirstindex(arr,0,data));
+	}
+}
